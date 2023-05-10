@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Source+Sans+Pro&family=Ubuntu&display=swap');
+
+:root {
+    --color-1: #202124;
+    --color-2: #f1f3f4;
+    --color-3: #eef3f8;
+    --border-color: #ebebeb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color-1);
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', 'Noto Sans', 'Ubuntu', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "left middle right"
+    ;
+    grid-template-columns: minmax(20rem, 27rem) minmax(20rem, auto) minmax(20rem, 27rem);
+    grid-template-rows: minmax(3rem, 4rem) minmax(auto, auto);
+    align-items: flex-start;
+    gap: 0 1rem;
+}
+
+header {
+    grid-area: header;
+}
+
+#left {
+    grid-area: left;
+    margin-left: 2rem;
+
+}
+
+#middle {
+    grid-area: middle;
+}
+
+#right {
+    grid-area: right;
+    margin-right: 2rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+#left > div, .left-heading, .left-description {
+    width: 100%;
+}
+
+#left > div {
+    margin-bottom: 1rem;
+}
+
+.left-heading {
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 0.25rem 0;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #dddddd
+}
+
+.left-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-description > div {
+    display: flex;
+    margin: 0.25rem 0;
+}
+
+.fa-circle {
+    font-size: 0.4rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+#secret-box {
+    margin: 1rem 0;
+}
+
+.fa-gift {
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.fa-arrows-rotate {
+    cursor: pointer;
+}
+
+#input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+#input {
+    max-width: 11.25rem;
+    text-align: center;
+    outline: none;
+    font-size: 2rem;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #00000014;
+    border-radius: 0.25rem;
+    background: var(--color-3);
+}
+
+#input:focus {
+    border-color: var(--color-1);
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-1);
+    border-radius: 0.25rem;
+}
+
+#guess-button {
+    max-width: 7.5rem;
+    font-size: 1rem;
+}
+
+#guess-left {
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+#secret-num, #lower, #higher, #guess-num {
+    font-size: 1.5rem;
+    margin: 0 0.125rem;
+}
+
+#won {
+    display: none;
+}
+
+#lost {
+    display: none;
+}
+
+#new-game {
+    display: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+
+#new-game:hover {
+    color: var(--color-3);
+    font-weight: 500;
+    background: var(--color-1);
+}

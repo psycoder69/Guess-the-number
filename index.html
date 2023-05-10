@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Guess the number </title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7748f3a2f4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1> Guess the number </h1>
+        </nav>
+    </header>
+
+    <section id="left">
+        <div>
+            <div class="left-heading"> About </div>
+
+            <div class="left-description">
+                <div>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>
+                        &#8220; Guess The Number &#8221; is a game where you must use your logic (or simply luck) in order to guess a secret number selected randomly at the beginning of the game.
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>
+                        This number is guessed by you via multiple attempts.
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>
+                        Each time you guess, system will match your guess with the secret number & respond accordingly.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="left-heading"> Instructions </div>
+
+            <div class="left-description">
+                <div>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>
+                        Enter your guess & press the guess button to check if it's a match.
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>
+                        Use your logic to win in minimum number of guesses.
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle"></i>
+                    <span>
+                        Keep an eye on the number of guesses or you might end up using all your guesses in hurry.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="middle">
+        <div id="secret-box">
+            <span> Your Secret Number is </span>
+            <i class="fa-solid fa-gift fa-bounce fa-lg" title="secret number"></i>
+            <span id="range">
+                between
+                <span id="lower"></span>
+                and
+                <span id="higher"></span>
+            </span>
+            <span id="secret-num"></span>
+        </div>
+
+        <div id="input-area">
+            <input type="text" name="input" id="input" inputmode="numeric" minlength="1" maxlength="3">
+            <button id="guess-button">
+                <span> Guess </span>
+                <i class="fa-solid fa-hand-sparkles"></i>
+            </button>
+        </div>
+
+        <div id="guess-left">
+            You have <span id="guess-num"></span> guesses left!
+        </div>
+
+        <div id="won">
+            Congrats! You found the secret number
+        </div>
+        <div id="lost">
+            Oops! You missed the secret number
+            <i class="fa-regular fa-face-frown"></i>
+        </div>
+
+        <button id="new-game"> Start New Game </button>
+    </section>
+
+    <section id="right">
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
